@@ -1,0 +1,1 @@
+console.log('now loading javascript from different file')
