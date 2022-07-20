@@ -5,6 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
   <!-- Importing openlayers library -->
   <link rel="stylesheet" href="./assets/ol/ol.css">
   <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
@@ -13,13 +16,20 @@
   <link rel="stylesheet" href="style.css">
   <!-- proj4js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.4.4/proj4.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
+  <script src="https://code.jquery.com/jquery-3.4.1.js"
 		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
   <title>Openlayers Basic</title>
 </head>
 <body>
   <h1>Openlayers map</h1>
-  <div id="map" class="map"></div>
+  <div id="map" class="map">
+      <select name="interaction" class="custom-select col-md-8" id="interaction" class="mx-4 mb-4 mt-4" onchange="getInteraction()">
+        <option value="poly">Polygon</option>
+        <option value="line">LineString</option>
+        <option value="free">Freehand</option>
+      </select>
+    
+  </div>
 
 
   <script defer src="main.js"></script>
